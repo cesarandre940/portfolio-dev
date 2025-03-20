@@ -6,14 +6,21 @@ import ManAvatar from "../assets/ManAvatar.png";
 import LinkedInIcon from "../components/icons/LinkedIn.astro";
 import SocialP from "../components/icons/SocialP.astro";
 import GithubIcon from "../components/icons/Github.astro";
+import MailIcon from "../components/icons/Mail.astro";
+import Experience from "../components/Experience.astro";
+import SectionCont from "../components/SectionCont.astro";
+import Glasses from "../components/icons/Glasses.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout title="Welcome to Astro">
+<Layout
+  title="Potffolio de Cesar Aguilar - Desarrollador Front End"
+  description="Cesar Aguilar es un desarrollador Front End con mas de 3 años de experiencia."
+>
   <main>
-    <section class="w-full mx-auto lg:w-[740px] py-44">
+    <SectionCont  class="py-44 pb-24">
       <img
         class="rounded-full w-12 h-12 mb-4"
         src={ManAvatar.src}
@@ -36,15 +43,27 @@ import GithubIcon from "../components/icons/Github.astro";
       </h2>
 
       <nav class="flex gap-x-2 mt-8">
-          <SocialP href="https://https://linkedin.com/in/andre-aguilar-ba53371b0">
-            <LinkedInIcon class="w-6 h-6" />
-            LinkedIn
-          </SocialP>
-		  <SocialP href="https://github.com/cesarandre940">
-            <GithubIcon class="w-6 h-6" />
-            Github
-          </SocialP>
-        </nav>
-    </section>
+        <SocialP href="https://https://linkedin.com/in/andre-aguilar-ba53371b0">
+          <LinkedInIcon class="w-6 h-6" />
+          LinkedIn
+        </SocialP>
+        <SocialP href="https://github.com/cesarandre940">
+          <GithubIcon class="w-6 h-6" />
+          Github
+        </SocialP>
+        <SocialP href="https://github.com/cesarandre940">
+          <MailIcon class="w-6 h-6" />
+          cesarandre940@gmail.com
+        </SocialP>
+      </nav>
+    </SectionCont>
+
+    <SectionCont id="experience">
+      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+		<Glasses class="w-6 h-6" />
+		Experiencia laboral
+	</h2>
+      <Experience />
+    </SectionCont>
   </main>
 </Layout>
