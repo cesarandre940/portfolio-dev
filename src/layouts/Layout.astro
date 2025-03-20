@@ -1,22 +1,51 @@
+---
+import "@fontsource-variable/inter";
+import Header from "../components/Header.astro";
+---
+
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
-</html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro Basics</title>
+  </head>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+  <body>
+    <div class="relative h-full w-full">
+      <div class="relative h-screen">
+        <div
+          class="absolute inset-0 -z-10 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"
+        >
+        </div>
+        <div
+          class="absolute top-1/2 left-1/2 h-[1000px] w-[1000px] rounded-full -z-10 bg-[radial-gradient(circle_400px_at_50%_300px,#fbfbfb36,#000)] transform -translate-x-1/2 -translate-y-1/2"
+        >
+        </div>
+        <Header />
+        <slot />
+      </div>
+    </div>
+
+    <style is:global>
+      :root {
+        color-scheme: light dark;
+      }
+      html {
+        font-family:
+          "Inter Variable",
+          system ui,
+          sans-serif;
+      }
+
+      body {
+        background: #050505;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+      }
+    </style>
+  </body>
+</html>
