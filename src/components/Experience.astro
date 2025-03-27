@@ -1,31 +1,30 @@
 ---
-import ExperienceItem from "./ExperienceItem.astro"
+import ExperienceItem from "./ExperienceItem.astro";
 
 const EXPERIENCE = [
-    {
-        date: "March 2022",
-        title: "Marketing UI design in Figma",
-        description: "All of the pages and components are first designed in Figma and we keep a parity between the two versions even as we update the project."
-    },
-    {
-        date: "April 2022",
-        title: "E-Commerce UI code in Tailwind CSS",
-        description: "Get started with dozens of web components and interactive elements built on top of Tailwind CSS."
-    }
-]
-
+  {
+    date: "May 2024",
+    title: "Frontend Developer ",
+    company: " McSystems",
+    description:
+      "Built a financial core system from scratch, automating key processes and enhancing efficiency. Developed an AI-driven chatbot, improving IT support response time by 33%. Automated check printing, reducing processing time by 30%. Implemented secure role-based authentication to protect sensitive financial data.",
+  },
+  {
+    date: "October 2023",
+    title: "Frontend Developer at Olympuz ",
+    company: "Olympuz",
+    description:
+      "Developed Olympuz, a fitness-focused web application designed to provide accessible, science-backed training guidance, helping users understand exercise biomechanics and train effectively. Created an intuitive, interactive dashboard that allows users to track their goals, monitor progress, and stay motivated throughout their fitness journey.",
+  },
+];
 ---
 
-<ol class="relative border-s border-gray-200 dark:border-gray-700">
-    {
-        EXPERIENCE.map(experience => (
+<ol class="relative border-s border-gray-200 ml-3">
+  {
+    EXPERIENCE.map((experience) => (
       <li class="mb-10 ms-4">
         <ExperienceItem {...experience} />
       </li>
-      ))
-    }
-               
-   
+    ))
+  }
 </ol>
-
-  
