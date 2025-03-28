@@ -3,7 +3,7 @@ import "@fontsource-variable/inter";
 
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import { ClientRouter} from "astro:transitions";
+import { ClientRouter } from "astro:transitions";
 
 interface Props {
   title: string;
@@ -20,11 +20,12 @@ const { title, description } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    <ClientRouter/>
+    <ClientRouter />
   </head>
 
   <body class="relative text-black dark:text-white">
-    <div class="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"></div>
+    <div class="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 bg-gradient-to-r from-black via-slate-700 to-black"></div>
+
     <Header />
     <slot />
     <Footer />
@@ -32,16 +33,14 @@ const { title, description } = Astro.props;
       :root {
         color-scheme: light dark;
       }
+
       html {
-        font-family:
-          "Inter Variable",
-          system ui,
-          sans-serif;
+        font-family: "Onest Variable", system-ui, sans-serif;
         scroll-behavior: smooth;
       }
 
       body {
-        color: rgb(17, 17, 17, 0.9);
+        color: rgba(17, 17, 17, 0.9);
         display: flex;
         flex-direction: column;
         min-height: 100vh;
@@ -54,23 +53,23 @@ const { title, description } = Astro.props;
         }
       }
 
-      @media(prefers-color-scheme: dark) {
+      @media (prefers-color-scheme: dark) {
         body {
-          color: rgb(255, 255, 255, 0.9);
+          color: rgba(255, 255, 255, 0.9);
         }
       }
 
-      #header-nav{
-        animation:blur linear both 0.5s;
+      #header-nav {
+        animation: blur linear both 0.5s;
         animation-timeline: scroll();
-        animation-range:0 500px;
+        animation-range: 0 500px;
       }
 
-      @keyframes blur{
-        to{
-          backdrop-filter: blur(200px);
+      @keyframes blur {
+        to {
+          backdrop-filter: blur(20px);
           border-width: 1px;
-          border-color: rgb(0, 0, 0);
+          border-color: rgba(0, 0, 0);
           padding: 0.25rem 0.75rem;
           display: flex;
           flex-direction: row;
@@ -105,7 +104,6 @@ const { title, description } = Astro.props;
           }
         }
       }
-
     </style>
   </body>
 </html>
