@@ -2,6 +2,7 @@
 import Nextjs from "./icons/Nextjs.astro";
 import Tailwind from "./icons/Tailwindcss.astro";
 
+
 const TAGS = {
   NEXT: {
     name: "Next.js",
@@ -27,7 +28,7 @@ const PROJECTS = [
   },
 ];
 ---
-
+<div class="flex flex-col gap-y-16">
 {
   PROJECTS.map(({ image, title, description, tags }) => (
     <article>
@@ -51,3 +52,5 @@ const PROJECTS = [
     </article>
   ))
 }
+
+</div>

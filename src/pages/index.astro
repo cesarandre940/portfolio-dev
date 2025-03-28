@@ -16,28 +16,29 @@ import TitleSection from "../components/TitleSection.astro";
   description="Cesar Aguilar es un desarrollador Front End con mas de 3 años de experiencia."
 >
   <main class="px-4">
-    <SectionCont>
+    <SectionCont class="py-16 md:py-36">
       <Hero>
-      </slot>
-  </Hero>
-</SectionCont>
-<div class="space-y-24">
+        </slot>
+      </Hero>
+    </SectionCont>
+      <div class="space-y-24">
 
-    <SectionCont id="experience">
+  <SectionCont id="experience">
       <TitleSection>
      <Glasses class="size-8"/>
       Experiencia
-</TitleSection>
+      </TitleSection>
       <Experience />
-    </SectionCont>
+  </SectionCont>
 
     <SectionCont id="projects">
-      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
-		<CodingIcon class="size-4 md:w-6 h-6" />
+      <TitleSection>
+        <CodingIcon class="w-7 h-7" />
 		Projects
-	</h2>
-      <Projects />
-    </SectionCont>
+  </TitleSection>
+  <Projects/>
+</SectionCont>
+	
   </div>
   </main>
 </Layout>
